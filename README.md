@@ -1,6 +1,4 @@
-Reproducible material for **DW0126: Generative wave propagator - Shijun Cheng and Tariq Alkhalifah**
-
-[Click here](https://kaust.sharepoint.com/:f:/r/sites/M365_Deepwave_Documents/Shared%20Documents/Restricted%20Area/REPORTS/DW0126?csf=1&web=1&e=ghL7SP) to access the Project Report. Authentication to the _Restricted Area_ filespace is required.
+Reproducible material for **Generative wave propagator - Shijun Cheng and Tariq Alkhalifah**
 
 ## Project structure
 
