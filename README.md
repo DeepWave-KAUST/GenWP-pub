@@ -59,11 +59,19 @@ The `dataset/` folder contains data-generation scripts and small-scale test data
 
 ## Dataset generation
 
-The full training dataset is not included in this repository because of its large storage size. Instead, we provide scripts to reproduce the dataset.
+The full training dataset is not included in this repository because of its large storage size. Instead, we provide scripts and resources to reproduce the dataset.
 
-The velocity models used to generate the wavefield dataset can be found in the `dataset.zip` file in the **DiffVMB2D** folder of the _Restricted Area_ filespace on [here](https://kaust.sharepoint.com/:f:/r/sites/M365_Deepwave_Documents/Shared%20Documents/Restricted%20Area/REPORTS/DW0100?csf=1&web=1&e=QZGuad). Please download and extract `dataset.zip` before running the wavefield-generation scripts.
+### Velocity models
 
-To generate the training dataset, run:
+The velocity models used to generate the wavefield training data are publicly available through our open-source Zenodo dataset:
+
+> **Zenodo**: [https://doi.org/10.5281/zenodo.19790506](https://doi.org/10.5281/zenodo.19790506)
+
+These velocity models can also be found in the supplementary files of our previous repository [DiffVMB-pub](https://github.com/DeepWave-KAUST/DiffVMB-pub). The dataset comprises 7871 velocity patches (256 × 256) extracted from a collection of industry benchmark models, including BP1994, BP2004, Hess, Otway, Sigsbee, SEG/EAGE, Overthrust, and SEAM Arid.
+
+### Generating wavefield snapshots
+
+After downloading the velocity models, generate the training wavefields by running:
 
 ```bash
 cd dataset/data_gen
@@ -78,16 +86,13 @@ If the generated data are saved in `.npz` format, they can be converted to `.h5`
 python npz2h5.py
 ```
 
-The HDF5 format is recommended for large-scale training because it supports compressed storage and efficient data access.
+The HDF5 format is recommended for large-scale training because it supports compressed storage and efficient random-access data loading.
 
 ## Supplementary files
-To ensure reproducibility, we provide the the data set for training and inference stages and our trainined diffusion model.
 
-* **Dataset**:
-Download the training and testing data set [here](https://kaust.sharepoint.com/:f:/r/sites/M365_Deepwave_Documents/Shared%20Documents/Restricted%20Area/REPORTS/DW0126?csf=1&web=1&e=ghL7SP). Then, use `unzip` to extract the contents.
+To ensure reproducibility, we provide our trained diffusion model.
 
-* **Trained model**:
-Download our trained diffusion model [here](https://kaust.sharepoint.com/:f:/r/sites/M365_Deepwave_Documents/Shared%20Documents/Restricted%20Area/REPORTS/DW0126?csf=1&web=1&e=ghL7SP). Then, use `unzip` to extract the contents.
+* **Trained model**: Download our trained diffusion model from [Google Drive](https://drive.google.com/file/d/17hMBkiTQ4G8WpyeJvSjAtlAxqr0K73kU/view?usp=drive_link). After downloading, extract the contents and place the checkpoint file in the `./checkpoints/` directory.
 
 ## Getting started :space_invader: :robot:
 To ensure reproducibility of the results, we suggest using the `environment.yml` file when creating an environment.
@@ -111,8 +116,8 @@ pip install -e .
 ```
 
 ## Running code :page_facing_up:
-When you have downloaded the supplementary files and have installed the environment, you can run the training and sampling code. 
-For traning, you can directly run:
+When you have downloaded the supplementary files and have installed the environment, you can run the training and sampling code.
+For training, you can directly run:
 ```
 python train.py
 ```
@@ -122,11 +127,11 @@ When you test the performance of our trained diffusion model, you can use the te
 python sample.py
 ```
 
-**Disclaimer:** All experiments have been carried on a Intel(R) Xeon(R) CPU @ 2.10GHz equipped with a single NVIDIA GEForce A100 GPU. Different environment 
-configurations may be required for different combinations of workstation and GPU. If your graphics card does not large batch size training, please reduce the configuration value of args (`batch_size`) in the `genwp/train.py` file.
+**Disclaimer:** All experiments have been carried on a Intel(R) Xeon(R) CPU @ 2.10GHz equipped with a single NVIDIA GeForce A100 GPU. Different environment
+configurations may be required for different combinations of workstation and GPU. If your graphics card does not support large batch size training, please reduce the configuration value of args (`batch_size`) in the `genwp/train.py` file.
 
 ## Acknowledgements
 This implementation is motivated from the paper [Improved Denoising Diffusion Probabilistic Models](https://arxiv.org/pdf/2102.09672) and the code adapted from their [repository](https://github.com/openai/improved-diffusion). We are grateful for their open source code.
 
-## Cite us 
+## Cite us
 DW0126 - Cheng and Alkhalifah. (2026) Generative wave propagator.
