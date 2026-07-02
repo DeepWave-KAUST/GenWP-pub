@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1><strong>Generative wave propagator</strong></h2>
+<h1><strong>Generative Wave Propagator</strong></h1>
 
 <h4>Shijun Cheng and Tariq Alkhalifah</h3>
 
