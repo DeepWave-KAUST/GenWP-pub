@@ -10,6 +10,10 @@
 
 </div>
 
+## Overview
+
+We introduce a conditional diffusion-based wavefield propagator that advances seismic wavefields recursively from one time step to the next. The model is conditioned on a short history of recent wavefield snapshots, the velocity model, and the wavefield time-step index, and is trained with a causal time-weighted loss that aligns the training trajectory with the physical direction of wave propagation to suppress recursive error accumulation. During inference, the strong physical conditioning allows each wavefield snapshot to be generated in a single forward pass, bypassing the costly iterative reverse sampling of standard diffusion models. The learned propagator operates at a physical time step ten times larger than the finite-difference stability limit, achieving an end-to-end speedup of 2.17× over a GPU-accelerated tenth-order staggered-grid FD solver under matched hardware conditions.
+
 ## Project structure
 
 This repository is organized as follows:
