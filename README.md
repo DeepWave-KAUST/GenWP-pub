@@ -1,4 +1,14 @@
-Reproducible material for **Generative wave propagator - Shijun Cheng and Tariq Alkhalifah**
+<div align="center">
+
+<h3><strong>Generative wave propagator</strong></h2>
+
+<h4>Shijun Cheng and Tariq Alkhalifah</h3>
+
+<h4><em>DeepWave Consortium, King Abdullah University of Science and Technology (KAUST)</em></h4>
+
+<p><em>Corresponding author: Shijun Cheng (<a href="mailto:sjcheng.academic@gmail.com">sjcheng.academic@gmail.com</a>)</em></p>
+
+</div>
 
 ## Project structure
 
