@@ -145,4 +145,3 @@ This implementation is motivated from the paper [Improved Denoising Diffusion Pr
   journal={arXiv preprint arXiv:2607.04440},
   year={2026}
 ```
-}
