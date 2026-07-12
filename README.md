@@ -138,4 +138,11 @@ configurations may be required for different combinations of workstation and GPU
 This implementation is motivated from the paper [Improved Denoising Diffusion Probabilistic Models](https://arxiv.org/pdf/2102.09672) and the code adapted from their [repository](https://github.com/openai/improved-diffusion). We are grateful for their open source code.
 
 ## Cite us
-Cheng and Alkhalifah. (2026) Generative wave propagator.
+```bibtex
+@article{cheng2026generative,
+  title={Generative wave propagator},
+  author={Cheng, Shijun and Alkhalifah, Tariq},
+  journal={arXiv preprint arXiv:2607.04440},
+  year={2026}
+```
+}
