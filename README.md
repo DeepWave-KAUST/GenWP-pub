@@ -96,7 +96,11 @@ The HDF5 format is recommended for large-scale training because it supports comp
 
 To ensure reproducibility, we provide our trained diffusion model.
 
-* **Trained model**: Download our trained diffusion model from [Google Drive](https://drive.google.com/file/d/17hMBkiTQ4G8WpyeJvSjAtlAxqr0K73kU/view?usp=drive_link). After downloading, extract the contents and place the checkpoint file in the `./checkpoints/` directory.
+* **Trained model**: Download our trained diffusion model from Zenodo:
+
+> **Zenodo**: [https://doi.org/10.5281/zenodo.19790506](https://doi.org/10.5281/zenodo.24017835)
+  
+After downloading, extract the contents and place the checkpoint file in the `./checkpoints/` directory.
 
 ## Getting started :space_invader: :robot:
 To ensure reproducibility of the results, we suggest using the `environment.yml` file when creating an environment.
