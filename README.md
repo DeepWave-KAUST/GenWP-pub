@@ -96,7 +96,7 @@ The HDF5 format is recommended for large-scale training because it supports comp
 
 To ensure reproducibility, we provide our trained diffusion model.
 
-* **Trained model**: Download our trained diffusion model from Zenodo:
+Download our trained diffusion model from Zenodo:
 
 > **Zenodo**: [https://doi.org/10.5281/zenodo.19790506](https://doi.org/10.5281/zenodo.24017835)
   
